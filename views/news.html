@@ -1,0 +1,20 @@
+<?php
+include $view['basePath'].'/head/header.html';
+include $view['basePath'].'/head/top.html';
+?>
+<body>
+<div class="row">
+<div class="large-12 medium-12 columns">
+<h3><?php echo $val['news']['title'];?></h3>
+<?php echo $val['news']['create_time'];?>&nbsp;&nbsp;来源:<?php echo $val['news']['source_name'];?>
+<hr />
+</div>
+</div>
+<div class="row">
+<div class="large-12 medium-12 columns">
+<?php echo $val['news']['detail'];?>
+</div>
+</div>
+<?php
+include $view['basePath'].'/head/footer.html';
+?>

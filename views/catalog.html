@@ -1,0 +1,27 @@
+<?php
+include $view['basePath'].'/head/header.html';
+include $view['basePath'].'/head/top.html';
+?>
+<body>
+<div class="row">
+<div class="large-12 medium-12 columns">
+<h3><?php echo $val['title'];?></h3>
+<hr />
+</div>
+</div>
+<?php 
+foreach($val['news'] as $eachNews){
+    ?>
+    <div class="row">
+<div class="large-10 medium-10 columns">
+<a href="<?php echo $eachNews['link'];?>" target="_blank"><?php echo $eachNews['title'];?></a>
+</div>
+<div class="large-2 medium-2 columns">
+<?php echo $eachNews['create_time'];?>
+</div>
+</div>
+    <?php
+}
+echo $val['page']; 
+include $view['basePath'].'/head/footer.html';
+?>
